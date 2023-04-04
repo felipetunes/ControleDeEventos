@@ -10,6 +10,7 @@
 </div>
 
 <form asp-controller="Contato" asp-action="Criar" method="post">
+
     <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome">
@@ -25,6 +26,10 @@
         <input type="number" asp-for="Celular" class=" form-control" placeholder="Digite o celular">
         @Html.ValidationMessageFor(x => x.Celular)
     </div>
-  <button type="submit" class="btn btn-primary">Adicionar</button>
-  <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
+
+    <div style="margin-top:20px">
+        <button type="submit" class="btn btn-primary">Adicionar</button>
+        <a class="btn btn-secondary" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
+    </div>
+
 </form>

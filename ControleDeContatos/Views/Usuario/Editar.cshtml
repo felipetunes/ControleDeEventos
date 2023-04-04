@@ -9,7 +9,8 @@
 </div>
 
 <form asp-controller="Usuario" asp-action="Alterar" method="post">
-    <input type="hidden" asp-for="Id"></input>
+    <input type="hidden" asp-for="Id" />
+
     <div class="form-group">
         <label for="nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome">
@@ -28,16 +29,21 @@
     <div class="form-group">
         <label for="perfil">Perfil</label>
         <select asp-for="Perfil" class=" form-control">
-            <option value="0"> Selecione </option>
+            <option value=""> Selecione </option>
             <option value="@PerfilEnum.Admin"> Administrador </option>
             <option value="@PerfilEnum.Padrao"> Padrão </option>
         </select>
+        @Html.ValidationMessageFor(x => x.Perfil)
     </div>
     <div class="form-group">
         <label for="nome">Senha</label>
         <input type="text" asp-for="Senha" class=" form-control" placeholder="Digite a senha">
         @Html.ValidationMessageFor(x => x.Senha)
     </div>
-    <button type="submit" class="btn btn-primary">Alterar</button>
-    <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>
+
+    <div style="margin-top:20px">
+        <button type="submit" class="btn btn-primary">Alterar</button>
+        <a class="btn btn-secondary" asp-controller="Usuario" asp-action="Index" role="button">Voltar</a>
+    </div>
+
 </form>

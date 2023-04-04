@@ -101,5 +101,37 @@ namespace ControleDeContatos.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult Editar(UsuarioSemSenhaModel usuarioSemSenha)
+        {
+            try
+            {
+                UsuarioModel usuario = null;
+
+                if (ModelState.IsValid)
+                {
+                    usuario = new UsuarioModel()
+                    {
+                        Id = usuarioSemSenha.Id,
+                        Nome = usuarioSemSenha.Nome,
+                        Login = usuarioSemSenha.Login,
+                        Email = usuarioSemSenha.Email,
+                        Perfil = usuarioSemSenha.Perfil
+                    };
+
+                    usuario = _usuarioRepositorio.Atualizar(usuario);
+                    TempData["MensagemSucesso"] = "Contato alterado com sucesso";
+                    return RedirectToAction("Index");
+                }
+
+                return View("Editar", usuario);
+            }
+            catch (Exception ex)
+            {
+                TempData["MensagemErro"] = $"Ops, não conseguimos alterar o contato, tente novamente, detalhe do erro:{ex}";
+                return RedirectToAction("Index");
+            }
+        }
+
     }
 }

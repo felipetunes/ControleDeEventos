@@ -1,4 +1,5 @@
 using ControleDeContatos.Data;
+using ControleDeContatos.Helper;
 using ControleDeContatos.Repositorio;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,16 @@ namespace ControleDeContatos
 
             builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            builder.Services.AddScoped<ISessao, Sessao>();
+
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
 
             var app = builder.Build();
 
@@ -31,6 +42,8 @@ namespace ControleDeContatos
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",

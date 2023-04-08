@@ -13,6 +13,7 @@ namespace ControleDeContatos.Repositorio
 
         public UsuarioModel Adicionar(UsuarioModel usuario)
         {
+            usuario.SetSenhaHash();
             usuario.DataCadastro = DateTime.Now;
             _context.Usuarios.Add(usuario);
             _context.SaveChanges();

@@ -1,4 +1,4 @@
-﻿namespace ControleDeContatos.Helper
+﻿namespace ControleDeEventos.Helper
 {
     public interface IEmail
     {

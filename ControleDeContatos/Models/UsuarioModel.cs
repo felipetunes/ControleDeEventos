@@ -1,8 +1,8 @@
-﻿using ControleDeContatos.Enums;
-using ControleDeContatos.Helper;
+﻿using ControleDeEventos.Enums;
+using ControleDeEventos.Helper;
 using System.ComponentModel.DataAnnotations;
 
-namespace ControleDeContatos.Models
+namespace ControleDeEventos.Models
 {
     public class UsuarioModel
     {

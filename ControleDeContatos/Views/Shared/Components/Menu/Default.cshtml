@@ -1,30 +1,34 @@
 ﻿@model UsuarioModel
 
-
-<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Olá, @Model.Nome</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
     <ul class="navbar-nav flex-grow-1">
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Página Inicial</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Contato" asp-action="Index">Contatos</a>
-        </li>
-        @if (Model.Perfil == ControleDeContatos.Enums.PerfilEnum.Admin)
-        {
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuarios</a>
-        </li>
-        }
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="AlterarSenha" asp-action="Alterar">Alterar Senha</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
-        </li>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Evento" asp-action="Index">Eventos</a>
+            </li>
+            @if (Model.Perfil == ControleDeEventos.Enums.PerfilEnum.Admin)
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuarios</a>
+                </li>
+            }
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="AlterarSenha" asp-action="Alterar">Alterar Senha</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+            </li>
     </ul>
+    <div class="justify-content-end" style="margin-right: 1rem">
+        <a asp-controller="Login" asp-action="Index">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Olá, @Model.Nome</a>
+            <img src="https://scontent.fcgh11-1.fna.fbcdn.net/v/t39.30808-6/340459338_200965195977567_1246598130574010064_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8bfeb9&_nc_eui2=AeEAEfuSwp4RV7gwkRqAtXnQrAcWPDgZoaisBxY8OBmhqJCMUBbzvnspu_4FEzal6IUKA0mh7RR54veR2TxRg9nQ&_nc_ohc=WupjoOUnPuoAX_m8HH2&_nc_ht=scontent.fcgh11-1.fna&oh=00_AfAXRUkNbPwWv6UX3ofiYKe6EhptBpGj2Cq13P54RFPgJQ&oe=6438263A" width="40" height="40" style="border-radius:50px" />
+        </a>
+    </div>
 </div>

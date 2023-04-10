@@ -1,9 +1,9 @@
-using ControleDeContatos.Data;
-using ControleDeContatos.Helper;
-using ControleDeContatos.Repositorio;
+using ControleDeEventos.Data;
+using ControleDeEventos.Helper;
+using ControleDeEventos.Repositorio;
 using Microsoft.EntityFrameworkCore;
 
-namespace ControleDeContatos
+namespace ControleDeEventos
 {
     public class Program
     {
@@ -17,7 +17,7 @@ namespace ControleDeContatos
             builder.Services.AddDbContext<BancoContext>(options => 
             options.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
 
-            builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
+            builder.Services.AddScoped<IEventoRepositorio, EventoRepositorio>();
             builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
             builder.Services.AddScoped<ISessao, Sessao>();
             builder.Services.AddScoped<IEmail, Email>();
@@ -48,7 +48,7 @@ namespace ControleDeContatos
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Login}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.Run();
         }

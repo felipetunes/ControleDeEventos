@@ -1,6 +1,6 @@
-﻿using ControleDeContatos.Models;
+﻿using ControleDeEventos.Models;
 
-namespace ControleDeContatos.Repositorio
+namespace ControleDeEventos.Repositorio
 {
     public interface IUsuarioRepositorio
     {

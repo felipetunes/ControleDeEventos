@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Net.Mail;
 
-namespace ControleDeContatos.Helper
+namespace ControleDeEventos.Helper
 {
     public class Email : IEmail
     {

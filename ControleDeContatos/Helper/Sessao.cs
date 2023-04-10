@@ -1,8 +1,8 @@
-﻿using ControleDeContatos.Models;
+﻿using ControleDeEventos.Models;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
-namespace ControleDeContatos.Helper
+namespace ControleDeEventos.Helper
 {
     public class Sessao : ISessao
     {

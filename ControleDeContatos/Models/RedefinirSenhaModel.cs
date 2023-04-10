@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ControleDeContatos.Models
+namespace ControleDeEventos.Models
 {
     public class RedefinirSenhaModel
     {

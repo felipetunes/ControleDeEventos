@@ -1,6 +1,6 @@
-﻿using ControleDeContatos.Models;
+﻿using ControleDeEventos.Models;
 
-namespace ControleDeContatos.Helper
+namespace ControleDeEventos.Helper
 {
     public interface ISessao
     {

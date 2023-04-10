@@ -1,10 +1,10 @@
-﻿using ControleDeContatos.Filters;
-using ControleDeContatos.Helper;
-using ControleDeContatos.Models;
-using ControleDeContatos.Repositorio;
+﻿using ControleDeEventos.Filters;
+using ControleDeEventos.Helper;
+using ControleDeEventos.Models;
+using ControleDeEventos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ControleDeContatos.Controllers
+namespace ControleDeEventos.Controllers
 {
     [PaginaParaUsuarioLogado]
     public class AlterarSenhaController : Controller

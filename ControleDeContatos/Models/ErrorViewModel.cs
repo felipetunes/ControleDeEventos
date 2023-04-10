@@ -1,4 +1,4 @@
-namespace ControleDeContatos.Models
+namespace ControleDeEventos.Models
 {
     public class ErrorViewModel
     {

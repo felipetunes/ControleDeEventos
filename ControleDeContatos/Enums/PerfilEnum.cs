@@ -1,4 +1,4 @@
-﻿namespace ControleDeContatos.Enums
+﻿namespace ControleDeEventos.Enums
 {
     public enum PerfilEnum
     {

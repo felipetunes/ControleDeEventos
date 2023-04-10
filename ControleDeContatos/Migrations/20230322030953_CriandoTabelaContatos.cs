@@ -2,16 +2,16 @@
 
 #nullable disable
 
-namespace ControleDeContatos.Migrations
+namespace ControleDeEventos.Migrations
 {
     /// <inheritdoc />
-    public partial class CriandoTabelaContatos : Migration
+    public partial class CriandoTabelaEventos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Contatos",
+                name: "Eventos",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -22,7 +22,7 @@ namespace ControleDeContatos.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Contatos", x => x.Id);
+                    table.PrimaryKey("PK_Eventos", x => x.Id);
                 });
         }
 
@@ -30,7 +30,7 @@ namespace ControleDeContatos.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Contatos");
+                name: "Eventos");
         }
     }
 }

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleDeEventos.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20230329015726_CriacaoTabelaUsuario")]
-    partial class CriacaoTabelaUsuario
+    [Migration("20230410010759_Eventos2")]
+    partial class Eventos2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,11 +33,10 @@ namespace ControleDeEventos.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Celular")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("Data")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Descricao")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -72,7 +71,7 @@ namespace ControleDeEventos.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

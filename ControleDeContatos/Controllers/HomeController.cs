@@ -1,16 +1,32 @@
-﻿using ControleDeContatos.Filters;
-using ControleDeContatos.Models;
+﻿using ControleDeEventos.Filters;
+using ControleDeEventos.Helper;
+using ControleDeEventos.Models;
+using ControleDeEventos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace ControleDeContatos.Controllers
+namespace ControleDeEventos.Controllers
 {
-    [PaginaParaUsuarioLogado]
     public class HomeController : Controller
     {
+        private readonly ISessao _sessao;
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
+        public HomeController(IUsuarioRepositorio usuarioRepositorio, ISessao sessao)
+        {
+            _usuarioRepositorio = usuarioRepositorio;
+            _sessao = sessao;
+        }
         public IActionResult Index()
         {
-            return View();
+            UsuarioModel usuarioLogado = new UsuarioModel();
+
+            usuarioLogado = _sessao.BuscarSessaoDoUsuario();
+
+            if (_sessao.BuscarSessaoDoUsuario() != null)
+            {
+                usuarioLogado = _sessao.BuscarSessaoDoUsuario();
+            }
+            return View(usuarioLogado);
         }
 
         public IActionResult Privacy()

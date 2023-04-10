@@ -1,9 +1,9 @@
-﻿using ControleDeContatos.Filters;
-using ControleDeContatos.Models;
-using ControleDeContatos.Repositorio;
+﻿using ControleDeEventos.Filters;
+using ControleDeEventos.Models;
+using ControleDeEventos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ControleDeContatos.Controllers
+namespace ControleDeEventos.Controllers
 {
     [PaginaRestritaSomenteAdmin]
     public class UsuarioController : Controller
@@ -122,7 +122,7 @@ namespace ControleDeContatos.Controllers
                     };
 
                     usuario = _usuarioRepositorio.Atualizar(usuario);
-                    TempData["MensagemSucesso"] = "Contato alterado com sucesso";
+                    TempData["MensagemSucesso"] = "Evento alterado com sucesso";
                     return RedirectToAction("Index");
                 }
 
@@ -130,7 +130,7 @@ namespace ControleDeContatos.Controllers
             }
             catch (Exception ex)
             {
-                TempData["MensagemErro"] = $"Ops, não conseguimos alterar o contato, tente novamente, detalhe do erro:{ex}";
+                TempData["MensagemErro"] = $"Ops, não conseguimos alterar o Evento, tente novamente, detalhe do erro:{ex}";
                 return RedirectToAction("Index");
             }
         }

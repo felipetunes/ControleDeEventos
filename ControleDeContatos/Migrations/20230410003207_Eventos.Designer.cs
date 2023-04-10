@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ControleDeEventos.Migrations
 {
     [DbContext(typeof(BancoContext))]
-    [Migration("20230329015726_CriacaoTabelaUsuario")]
-    partial class CriacaoTabelaUsuario
+    [Migration("20230410003207_Eventos")]
+    partial class Eventos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -72,7 +72,7 @@ namespace ControleDeEventos.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

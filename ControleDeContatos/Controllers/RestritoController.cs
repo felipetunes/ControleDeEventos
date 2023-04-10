@@ -1,7 +1,7 @@
-﻿using ControleDeContatos.Filters;
+﻿using ControleDeEventos.Filters;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ControleDeContatos.Controllers
+namespace ControleDeEventos.Controllers
 {
     [PaginaParaUsuarioLogado]
     public class RestritoController : Controller

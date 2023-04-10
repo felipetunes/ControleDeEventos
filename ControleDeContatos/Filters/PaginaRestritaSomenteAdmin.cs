@@ -1,10 +1,10 @@
-﻿using ControleDeContatos.Models;
+﻿using ControleDeEventos.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 
-namespace ControleDeContatos.Filters
+namespace ControleDeEventos.Filters
 {
     public class PaginaRestritaSomenteAdmin : ActionFilterAttribute
     {

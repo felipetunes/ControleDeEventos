@@ -1,7 +1,7 @@
-﻿using ControleDeContatos.Enums;
+﻿using ControleDeEventos.Enums;
 using System.ComponentModel.DataAnnotations;
 
-namespace ControleDeContatos.Models
+namespace ControleDeEventos.Models
 {
     public class LoginModel
     {

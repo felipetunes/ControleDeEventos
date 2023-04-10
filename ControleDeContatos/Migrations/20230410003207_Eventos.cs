@@ -5,24 +5,18 @@
 namespace ControleDeEventos.Migrations
 {
     /// <inheritdoc />
-    public partial class CriacaoTabelaUsuario2 : Migration
+    public partial class Eventos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "Name",
-                table: "Usuarios",
-                newName: "Nome");
+
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.RenameColumn(
-                name: "Nome",
-                table: "Usuarios",
-                newName: "Name");
+
         }
     }
 }

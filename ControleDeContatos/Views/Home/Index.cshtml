@@ -1,8 +1,18 @@
-﻿@{
+﻿@model UsuarioModel
+
+@{
+    @if (Model != null)
+    {
+        Layout = "_Layout";
+    }
+    else
+    {
+        Layout = "_LayoutDeslogado";
+    }
     ViewData["Title"] = "Página Inicial";
 }
 
 <div class="text-center">
     <h1 class="display-4">Bem vindo!</h1>
-    <p>Sistema de controle de contatos</p>
+    <p>Sistema de controle de eventos</p>
 </div>

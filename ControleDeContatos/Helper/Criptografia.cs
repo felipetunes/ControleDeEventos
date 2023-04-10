@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ControleDeContatos.Helper
+namespace ControleDeEventos.Helper
 {
     public static class Criptografia
     {

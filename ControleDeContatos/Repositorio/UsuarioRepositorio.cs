@@ -1,7 +1,7 @@
-﻿using ControleDeContatos.Data;
-using ControleDeContatos.Models;
+﻿using ControleDeEventos.Data;
+using ControleDeEventos.Models;
 
-namespace ControleDeContatos.Repositorio
+namespace ControleDeEventos.Repositorio
 {
     public class UsuarioRepositorio : IUsuarioRepositorio
     {

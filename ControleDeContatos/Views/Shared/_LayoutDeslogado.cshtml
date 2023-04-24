@@ -8,37 +8,46 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ControleDeEventos.styles.css" asp-append-version="true" />
     <link href="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-5">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Controle de eventos</a>
-                <a asp-controller="Login" asp-action="Index">
-                    <img src="https://www.promoview.com.br/uploads/images/unnamed%2819%29.png" width="40" height="40" style="border-radius:50px" />
-                </a>
+                <strong><a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="margin-left:50px">Controle de eventos</a></strong>
+                <a class="btn btn-enter" asp-controller="Login" asp-action="Index" role="button"><strong>Entrar</strong></a>
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Controle de eventos
+    <footer class="border-top footer text-muted bg-dark">
+        <div class="container text-white">
+            <span style="font-size: 17px;"><strong>Controle de Eventos</strong></span> <br />
+            <div style="margin-top:5px">
+            Quem Somos <br/>
+            Termos de uso <br/>
+            Política de cancelamento <br/>
+            Política de privacidade <br/>
+            Trabalhe Conosco <br/>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/v/dt/dt-1.13.4/datatables.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/b161e9aa71.js" crossorigin="anonymous"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

@@ -1,11 +1,21 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
-
-$(document).ready(function(){
+﻿$(document).ready(function(){
     getDatatable('#table-Eventos');
     getDatatable('#table-usuarios');
+
+    $('.your-class').slick({
+        infinite: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: false,
+        focusOnSelect: true,
+        prevArrow: $("#arrow-prev"),
+        nextArrow: $("#arrow-next"),
+        autoplay: false,
+        autoplaySpeed: 4000,
+    });
+
+    $('#arrow-prev').hide();
+
 });
 
 function getDatatable(id) {
@@ -41,4 +51,13 @@ function getDatatable(id) {
 
 $('.close-alert').click(function () {
     $('.alert').hide('hide');
+})
+
+$(".custom-file-input").on("change", function () {
+    var fileName = $(this).val().split("\\").pop();
+    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+
+$('#arrow-next').click(function () {
+    $('#arrow-prev').show();
 })

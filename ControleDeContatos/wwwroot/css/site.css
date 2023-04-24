@@ -32,3 +32,66 @@ body {
     width:30px;
     height:31px;
 }
+
+#arrow-prev:hover {
+    background-color: dimgray !important;
+    opacity: 0.7 !important;
+    width: 45px !important;
+}
+
+#arrow-next:hover {
+    background-color: dimgray !important;
+    opacity: 0.7 !important;
+}
+
+.slick-btn {
+    width: 40px;
+    height: 285px;
+    background-color: gray;
+    position: absolute;
+    z-index: 10;
+    opacity: 0.3;
+    margin-top: 4px;
+}
+
+.arrow-logo {
+    margin-top: 140px;
+    color: white;
+    margin-left: 10px
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 9rem; /* altura do rodapé */
+    margin-top: 50px;
+    line-height: 23px !important;
+    padding: 20px;
+    font-size: 11px;
+}
+
+.btn-enter{
+    margin-right: 50px;
+    background-color: #ee3680;
+    border-radius: 40px;
+    padding: 5px 25px 5px 25px;
+    color: white
+}
+
+/* Flex Container */
+.container2 {
+    max-width: 96%;
+    display: flex;
+}
+
+.item {
+    margin: 5px;
+    padding: 0 10px;
+    text-align: center;
+}
+

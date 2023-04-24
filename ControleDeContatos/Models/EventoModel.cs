@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.CompilerServices;
 
 namespace ControleDeEventos.Models
@@ -12,5 +13,9 @@ namespace ControleDeEventos.Models
         public string Descricao { get; set;}
         [Required(ErrorMessage = "Digite a data do evento")]
         public DateTime Data { get; set;}
+        public string Local { get; set; }
+        public string Foto { get; set; }
+        [NotMapped]
+        public bool Logged { get; set; }
     }
 }

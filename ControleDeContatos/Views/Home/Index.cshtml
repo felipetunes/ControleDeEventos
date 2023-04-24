@@ -12,7 +12,8 @@
     ViewData["Title"] = "Página Inicial";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Bem vindo!</h1>
-    <p>Sistema de controle de eventos</p>
+<div class="container-fluid">
+    @await Component.InvokeAsync("ProximosEventos")
 </div>
+
+

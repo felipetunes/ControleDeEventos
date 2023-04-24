@@ -39,6 +39,7 @@ namespace ControleDeEventos.Repositorio
 
             EventoDB.Nome = Evento.Nome;
             EventoDB.Descricao = Evento.Descricao;
+            EventoDB.Local = Evento.Local;
             EventoDB.Data = Evento.Data;
 
             _context.Eventos.Update(EventoDB);

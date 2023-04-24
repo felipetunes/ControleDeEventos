@@ -11,24 +11,31 @@
   <input type="hidden" asp-for="Id" />
 
     <div class="form-group">
-    <label for="nome">Nome</label>
+    <label for="Nome">Nome</label>
         <input type="text" asp-for="Nome" class=" form-control" placeholder="Digite o nome">
         @Html.ValidationMessageFor(x => x.Nome)
     </div>
     <div class="form-group">
-        <label for="nome">Descricao</label>
+        <label for="Descricao">Descricao</label>
         <input type="text" asp-for="Descricao" class=" form-control" placeholder="Digite a descrição">
         @Html.ValidationMessageFor(x => x.Descricao)
     </div>
-       <div class="form-group">
-          <label for="nome">Celular</label>
+    <div class="form-group">
+        <label for="Local">Local</label>
+        <input type="text" asp-for="Local" class=" form-control" placeholder="Digite o local">
+        @Html.ValidationMessageFor(x => x.Local)
+    </div>
+    <div class="form-group">
+          <label for="Data">Data</label>
         <input type="datetime" asp-for="Data" class="form-control" placeholder="Digite a data">
         @Html.ValidationMessageFor(x => x.Data)
     </div>
-
+    <div style="margin-top:20px">
+        <img src="~/fotos/@Url.Content(Model.Foto)" width="250" style="border-radius:10px" />
+    </div>
     <div style="margin-top:20px">
         <button type="submit" class="btn btn-primary">Alterar</button>
         <a class="btn btn-secondary" asp-controller="Evento" asp-action="Index" role="button">Voltar</a>
     </div>
-
+    
 </form>

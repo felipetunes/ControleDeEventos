@@ -1,0 +1,32 @@
+﻿@model List<EventoModel>
+
+<div>
+
+<section class="container2 space-between">
+        <div><h5 style="color:#ee3680" class="item"><strong>Destaques</strong></h5></div>
+        <div><h6 class="item"><strong>Ver todos</strong></h6></div>
+</section>
+
+    <div id="arrow-next" class="slick-next slick-btn" style="border-radius: 10px 0px 0px 10px; right: 0;"><i class="fa-solid fa-angle-right fa-2xl arrow-logo" id="arrow-next-logo"></i></div>
+    <div id="watch-name" class="description"></div>
+    <div id="arrow-prev" class="slick-prev slick-btn" style="border-radius: 0px 10px 10px 0px; left: 0;"><i class="fa-solid fa-angle-left  fa-2xl arrow-logo" id="arrow-prev-logo"></i></div>
+
+    <div class="your-class" style="width:100%">
+
+        @foreach (EventoModel evento in Model.OrderBy(x => x.Data))
+        {
+            <a asp-route-id="@evento.Id" asp-controller="Evento" asp-action="Detalhe" style="text-decoration: none; color:black;">
+                <div class="card" style="margin-right:10px; margin:10px; border-radius:10px; box-shadow: 4px 4px 5px -4px rgba(0,0,0,0.42); width:auto">
+                    <img src="~/fotos/@Url.Content(@evento.Foto)" class="card-img-top" style="border-radius:10px 10px 0px 0px; width: auto; height: 150px;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="white-space: nowrap;overflow: hidden;">@evento.Nome</h5>
+                        <p class="card-text" style="overflow: hidden; height:20px; max-height:20px">@evento.Local</p>
+                        <p class="card-text" style="overflow: hidden; height:20px; max-height:20px">@evento.Data</p>
+                    </div>
+                </div>
+            </a>
+        }
+       
+    </div>
+
+</div>

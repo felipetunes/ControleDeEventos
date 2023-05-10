@@ -1,8 +1,11 @@
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
+<h1 align="center"> CONTROLE DE EVENTOS </h1>
+
 * [Índice](#índice)
 * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
 * [Tecnologias Utilizadas](#tecnologias-utilizadas)
+* [Acesso ao Projeto](#acesso-ao-projeto)
 * [Conclusão](#conclusão)
 
 # Índice
@@ -31,10 +34,11 @@ Além disso, existe a opção de redefinir a senha recebendo uma nova senha por 
 ![log](https://github.com/felipetunes/ControleDeEventos/assets/44438287/fed5daa8-d142-4a17-85bb-0f0a64d8a69d)
 
 #### Eventos
-- A seção de Eventos é o local onde você pode gerenciar todas as informações sobre os eventos.
+A seção de Eventos é o local onde você pode gerenciar todas as informações sobre os eventos.
 É possível criar, editar ou excluir um evento com facilidade. Ao criar ou editar um evento, é importante preencher um formulário completo com todas as
 informações relevantes, tais como o nome do evento, a localização, a data e uma imagem que será exibida nos carrosséis da página inicial.
 ![even](https://github.com/felipetunes/ControleDeEventos/assets/44438287/695a4e9b-5284-459b-a998-d84472286fda)
+
 
 #### Usuários
 - Já a seção de Usuários é responsável por gerenciar todas as informações sobre os usuários cadastrados. É possível criar, editar ou excluir um usuário com facilidade.

@@ -19,6 +19,7 @@ São apresentados três carrosséis que direcionam o usuário para mais informa�
 Inspirado no menu da Netflix, foi utilizado a biblioteca Slick.js para oferecer uma experiência visual agradável e interativa.
 O primeiro carrossel exibe promoções e os eventos mais procurados pelo público. Já o segundo carrossel destaca os eventos mais próximos,
 ordenados por data, e o terceiro mostra os eventos mais próximos por localização. Além de um campo de busca por nome ou data.
+![paginainicial](https://s12.gifyu.com/images/paginainicial.gif)
 
 #### Detalhes
 - Quando clicado em um card do Carrosel na Página Inicial, é exibida a página que contém todas as informações sobre o evento escolhido.
